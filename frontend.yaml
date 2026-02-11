@@ -51,6 +51,6 @@
       dest: /etc/nginx.conf   
 
   - name: restart Nginx
-    ansible.builtin.command: systemctl restart nginx 
-      # name: nginx
-      # state: restarted  
+    ansible.builtin.service:
+      name: nginx
+      state: restarted  
