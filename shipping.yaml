@@ -4,8 +4,8 @@
   tasks: 
   - name: Install maven
     ansible.builtin.dnf:
-    name: maven
-    state: installed
+      name: maven
+      state: installed
     
   - name: Install PyMySQL
     ansible.builtin.pip:
