@@ -31,6 +31,10 @@
       regexp: 'protected-mode'
       line: protected-mode no
 
+  - name: systemctl daemon_reload
+    ansible.builtin.systemd_service:
+      daemon_reload: true
+
   - name: Start & Enable Redis Servics
     ansible.builtin.service:
       name: redis
